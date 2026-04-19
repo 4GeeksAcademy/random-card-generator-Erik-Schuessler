@@ -47,10 +47,6 @@ body{
     transform: rotate(180deg);
 }
 
-.spades, .clubs {
-    color: black;
-}
-
-.hearts, .diamonds {
+.red {
     color: #e32729;
 }
