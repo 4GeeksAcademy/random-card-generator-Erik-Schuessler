@@ -15,14 +15,27 @@ let randomValue = getRandomElement(values);
 window.onload = function() {
   //write your code here
 
-  const mainContainer = document.getElementById("main-container"); 
+  const mainContainer = document.getElementById("card-container"); 
   const valueContainer = document.getElementById("value");
   const leftSuit = document.getElementById("left");
   const rightSuit = document.getElementById("right");
+  const dealButton = document.getElementById("deal-button");
 
   valueContainer.innerText = randomValue;
   leftSuit.innerText = randomSuit;
   rightSuit.innerText = randomSuit;
   
   if (randomSuit === "♦" || randomSuit === "♥") mainContainer.classList.add("red");
+
+ dealButton.onclick = () => {
+    let newRandomSuit = getRandomElement(suits);
+    valueContainer.innerText = getRandomElement(values);
+    leftSuit.innerText = newRandomSuit;
+    rightSuit.innerText = newRandomSuit;
+    if (newRandomSuit === "♦" || newRandomSuit === "♥"){
+      mainContainer.classList.add("red");
+      mainContainer.classList.remove("black")
+    } 
+    else mainContainer.classList.add("black")
+ }
 };
