@@ -38,4 +38,17 @@ window.onload = function() {
     } 
     else mainContainer.classList.add("black")
  }
+
+ setInterval(() => {
+  let newRandomSuit = getRandomElement(suits);
+    valueContainer.innerText = getRandomElement(values);
+    leftSuit.innerText = newRandomSuit;
+    rightSuit.innerText = newRandomSuit;
+    if (newRandomSuit === "♦" || newRandomSuit === "♥"){
+      mainContainer.classList.add("red");
+      mainContainer.classList.remove("black")
+    } 
+    else mainContainer.classList.add("black")
+ }, 10000);
+
 };
