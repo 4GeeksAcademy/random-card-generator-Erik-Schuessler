@@ -34,9 +34,9 @@ window.onload = function() {
     rightSuit.innerText = newRandomSuit;
     if (newRandomSuit === "♦" || newRandomSuit === "♥"){
       mainContainer.classList.add("red");
-      mainContainer.classList.remove("black")
+      mainContainer.classList.remove("black");
     } 
-    else mainContainer.classList.add("black")
+    else mainContainer.classList.add("black");
  }
 
  setInterval(() => {
@@ -46,9 +46,9 @@ window.onload = function() {
     rightSuit.innerText = newRandomSuit;
     if (newRandomSuit === "♦" || newRandomSuit === "♥"){
       mainContainer.classList.add("red");
-      mainContainer.classList.remove("black")
-    } 
-    else mainContainer.classList.add("black")
+      mainContainer.classList.remove("black");
+    }
+    else mainContainer.classList.add("black");
  }, 10000);
 
 };
